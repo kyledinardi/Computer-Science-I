@@ -38,7 +38,7 @@ public class PatientDriverApp {
 	 * @param procedure1 the first procedure
 	 * @param procedure2 the second procedure
 	 * @param procedure3 the third procedure
-	 * @return
+	 * @return The total charges for the procedures
 	 */
 	public static double calculateTotalCharges(Procedure procedure1, Procedure procedure2, Procedure procedure3) {
 		return procedure1.getCharges() + procedure2.getCharges() + procedure3.getCharges();
@@ -50,7 +50,7 @@ public class PatientDriverApp {
 	 * 
 	 * @param textToPrint the prompt message
 	 * @param keyboard    the terminal input scanner
-	 * @return
+	 * @return validated string input
 	 */
 	public static String validateString(String textToPrint, Scanner keyboard) {
 		System.out.print(textToPrint);
@@ -71,7 +71,7 @@ public class PatientDriverApp {
 	 * 
 	 * @param textToPrint the prompt message
 	 * @param keyboard    the terminal input scanner
-	 * @return
+	 * @return validated double input
 	 */
 	public static double validateDouble(String textToPrint, Scanner keyboard) {
 		System.out.print(textToPrint);
