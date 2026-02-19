@@ -1,3 +1,15 @@
+/*
+* Class: CMSC203
+* Instructor: Professor Tanveer
+* Description: Practice with 2D arrays
+* Due: 03/03/2026
+* Platform/compiler: Linux, Eclipse, Java 21
+* I pledge that I have completed the programming assignment independently.
+* I have not copied the code from a student or any source.
+* I have not given my code to any student.
+* Print your Name here: Kyle Dinardi
+*/
+
 /* TwoDimArrayPractice
 *  Students Work with this Java file
 *  On Multi-dimensional Arrays
@@ -492,3 +504,4 @@ public class TwoDimArrayPractice extends JFrame {
 		}
 	}
 }
+
