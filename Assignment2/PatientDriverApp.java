@@ -45,39 +45,44 @@ public class PatientDriverApp {
 	}
 
 	/**
-	 * Loops prompt, input, and error until the input is not empty.
+	 * Validates string inputs by looping the prompt, input, and error message until
+	 * the input is not empty.
 	 * 
-	 * @param textToPrint
-	 * @param keyboard
+	 * @param textToPrint the prompt message
+	 * @param keyboard    the terminal input scanner
 	 * @return
 	 */
 	public static String validateString(String textToPrint, Scanner keyboard) {
-		String input = "";
+		System.out.print(textToPrint);
+		String input = keyboard.nextLine();
 
-		while (input.equals("")) {
+		while (input.isEmpty()) {
+			System.out.println("Invalid input: cannot be empty.");
 			System.out.print(textToPrint);
 			input = keyboard.nextLine();
-
-			if (input.equals("")) {
-				System.out.println("Invalid input: cannot be empty.");
-			}
 		}
 
 		return input;
 	}
 
+	/**
+	 * Validates double inputs by looping the prompt, input, and error message until
+	 * the input is not empty.
+	 * 
+	 * @param textToPrint the prompt message
+	 * @param keyboard    the terminal input scanner
+	 * @return
+	 */
 	public static double validateDouble(String textToPrint, Scanner keyboard) {
-		double input = -1;
-		
+		System.out.print(textToPrint);
+		double input = keyboard.nextDouble();
+
 		while (input < 0) {
+			System.out.println("Invalid input: charges cannot be negative.");
 			System.out.print(textToPrint);
 			input = keyboard.nextDouble();
-
-			if (input < 0) {
-				System.out.println("Invalid input: charges cannot be negative.");
-			}
 		}
-		
+
 		return input;
 	}
 
@@ -109,7 +114,7 @@ public class PatientDriverApp {
 
 			double procedure1Charges = validateDouble("Enter the charges for the first Procedure: ", keyboard);
 			keyboard.nextLine();
-			
+
 			Procedure procedure1 = new Procedure();
 			procedure1.setName(procedure1Name);
 			procedure1.setDate(procedure1Date);
@@ -124,7 +129,7 @@ public class PatientDriverApp {
 
 			double procedure2Charges = validateDouble("Enter the charges for the second Procedure: ", keyboard);
 			keyboard.nextLine();
-			
+
 			Procedure procedure2 = new Procedure(procedure2Name, procedure2Date);
 			procedure2.setPractitioner(procedure2Practitioner);
 			procedure2.setCharges(procedure2Charges);
